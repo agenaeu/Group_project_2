@@ -4,7 +4,7 @@ CREATE DATABASE sushi_db;
 USE sushi_db;
 
 -- Create the table tasks.
-CREATE TABLE orders
+CREATE TABLE order
 (
 id int NOT NULL AUTO_INCREMENT,
 rollName varchar(255) NOT NULL,
@@ -13,7 +13,7 @@ tableNumber int NOT NULL,
 PRIMARY KEY (id)
 );
 
-CREATE TABLE menu
+CREATE TABLE food
 (
 id int NOT NULL AUTO_INCREMENT,
 price int NOT NULL,
