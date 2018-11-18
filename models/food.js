@@ -5,7 +5,11 @@ module.exports = function (sequelize, DataTypes) {
     category: DataTypes.STRING
   });
 
-  Food.hasMany(models.Order);
+  Food.associate = function (models) {
+
+    Food.hasMany(models.Order);
+
+  };
 
   return Food;
 
