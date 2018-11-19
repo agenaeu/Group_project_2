@@ -21,7 +21,7 @@ INSERT INTO food (price, rollName, category) VALUES ('15, Big Eye Diver, Maki');
 INSERT INTO food (price, rollName, category) VALUES ('15, Tempura Crunchy, Maki');
 INSERT INTO food (price, rollName, category) VALUES ('15, Ahi Tuna Tataki, Maki');
 INSERT INTO food (price, rollName, category) VALUES ('15, Poki Poki, Maki');
-
+/* -------------------------------------------------------------------------------------------- */
 INSERT INTO order (rollName, quantity, tablenumber) VALUES ('Tuna, 1, 1');
 INSERT INTO order (rollName, quantity, tablenumber) VALUES ('Vegi Vegi, 2, 2');
 INSERT INTO order (rollName, quantity, tablenumber) VALUES ('Ahi Tuna Tataki, 1, 2');
