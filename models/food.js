@@ -5,11 +5,11 @@ module.exports = function (sequelize, DataTypes) {
     category: DataTypes.STRING
   });
 
-  Food.associate = function (models) {
+  /* Food.associate = function (models) {
 
-    Food.hasMany(models.Order);
+    Food.hasMany(models.Orders);
 
-  };
+  }; */
 
   return Food;
 

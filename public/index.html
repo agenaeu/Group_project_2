@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+    <script src="/public/js/index.js"></script>
     
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
@@ -162,7 +163,7 @@
                                             <select name="" id="s_8">
                                                 <option value="">0</option>
                                                 <option value="SEA URCHIN 1">1</option>
-                                                <option value="SEA URCHIN2">2</option>
+                                                <option value="SEA URCHIN 2">2</option>
                                                 <option value="SEA URCHIN 3">3</option>
                                                 <option value="SEA URCHIN 4">4</option>
                                                 <option value="SEA URCHIN 5">5</option>
@@ -469,7 +470,7 @@
 
                     <textarea class="margin-box" rows="2" cols="20" name="comment" placeholder="Special Requests"></textarea>
                 </div>
-                <input class="highlight-button btn btn-large" value="Submit Your Order" type="submit">
+                <input id="orderSubmit" class="highlight-button btn btn-large" value="Submit Your Order" type="submit">
 
             </div>
         </div>
@@ -505,121 +506,6 @@
 
 
 
-    <script>
-
-        $('#s_1').on('change', function () {
-            $('#res1').html($(this).val());
-        });
-
-        $('#s_2').on('change', function () {
-            $('#res2').html($(this).val());
-        });
-
-        $('#s_3').on('change', function () {
-            $('#res3').html($(this).val());
-        });
-
-        $('#s_4').on('change', function () {
-            $('#res4').html($(this).val());
-        });
-
-        $('#s_5').on('change', function () {
-            $('#res5').html($(this).val());
-        });
-
-        $('#s_6').on('change', function () {
-            $('#res6').html($(this).val());
-        });
-
-        $('#s_7').on('change', function () {
-            $('#res7').html($(this).val());
-        });
-
-        $('#s_8').on('change', function () {
-            $('#res8').html($(this).val());
-        });
-
-        $('#s_9').on('change', function () {
-            $('#res9').html($(this).val());
-        });
-
-        $('#s_10').on('change', function () {
-            $('#res10').html($(this).val());
-        });
-
-        $('#s_11').on('change', function () {
-            $('#res11').html($(this).val());
-        });
-
-        $('#s_12').on('change', function () {
-            $('#res12').html($(this).val());
-        });
-
-        $('#s_13').on('change', function () {
-            $('#res13').html($(this).val());
-        });
-
-        $('#s_14').on('change', function () {
-            $('#res14').html($(this).val());
-        });
-
-        $('#s_15').on('change', function () {
-            $('#res15').html($(this).val());
-        });
-
-        $('#s_16').on('change', function () {
-            $('#res16').html($(this).val());
-        });
-
-        $('#s_17').on('change', function () {
-            $('#res17').html($(this).val());
-        });
-
-        $('#s_18').on('change', function () {
-            $('#res18').html($(this).val());
-        });
-
-        $('#s_19').on('change', function () {
-            $('#res19').html($(this).val());
-        });
-
-        $('#s_20').on('change', function () {
-            $('#res20').html($(this).val());
-        });
-
-        $('#s_21').on('change', function () {
-            $('#res21').html($(this).val());
-        });
-
-        $('#s_22').on('change', function () {
-            $('#res22').html($(this).val());
-        });
-
-    </script>
-
-
-    <script>
-
-
-        var boxHide = $(".sticky");
-
-        function hideList() {
-            boxHide.hide();
-        }
-
-        hideList();
-
-        $("[id^='s']").on('change', function () {
-            boxHide.fadeIn("slow");
-
-        })
-
-    </script>
-
-    <script>$('#myModal').on('shown.bs.modal', function () {
-            $('#myInput').trigger('focus')
-        })
-    </script>
 
 
 </body>
@@ -627,12 +513,3 @@
 </html>
 
 
-<!--         
-// $("[id^='s_']").on('change',function(){
-//     // Create the new row
-// var newRow = $("<tr>").html(
-// $("<td>").text($(this).val()) 
-// );
-// $("#result").append(newRow);
-
-//  }); -->

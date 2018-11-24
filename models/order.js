@@ -1,16 +1,16 @@
 module.exports = function (sequelize, DataTypes) {
-  let Order = sequelize.define("order", {
+  let Orders = sequelize.define("orders", {
     rollName: DataTypes.STRING,
     quantity: DataTypes.INTEGER,
     tableNumber: DataTypes.INTEGER
   });
 
-  Order.associate = function (models) {
+  Orders.associate = function (models) {
 
-    Order.belongsTo(models.Food);
+    Orders.belongsTo(models.Food);
 
   };
 
-  return Order;
+  return Orders;
 
 };

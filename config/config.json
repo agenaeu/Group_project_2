@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "B00tCamp",
+    "password": "Mooninite_23",
     "database": "sushi_db",
     "host": "localhost",
     "dialect": "mysql"
