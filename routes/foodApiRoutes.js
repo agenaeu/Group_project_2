@@ -1,9 +1,9 @@
-var db = require("../models");
+var Food = require("../models/food.js");
 
 module.exports = function (app) {
   // Get all Food
   app.get("/api/food", function (req, res) {
-    db.Food.findAll({}).then(function (dbFood) {
+    Food.findAll({}).then(function (dbFood) {
       res.json(dbFood);
     });
   });
@@ -12,7 +12,7 @@ module.exports = function (app) {
 
   // Create a new roll
   app.post("/api/food", function (req, res) {
-    db.Food.create(req.body).then(function (dbFood) {
+    Food.create(req.body).then(function (dbFood) {
       res.json(dbFood);
     });
   });
@@ -21,7 +21,7 @@ module.exports = function (app) {
 
   // Delete an example by id
   app.delete("/api/food/:id", function (req, res) {
-    db.Food.destroy({ where: { id: req.params.id } }).then(function (dbFood) {
+    Food.destroy({ where: { id: req.params.id } }).then(function (dbFood) {
       res.json(dbFood);
     });
   });
