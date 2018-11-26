@@ -1,16 +1,42 @@
 module.exports = function (sequelize, DataTypes) {
-  let Orders = sequelize.define("orders", {
-    rollName: DataTypes.STRING,
-    quantity: DataTypes.INTEGER,
-    tableNumber: DataTypes.INTEGER
-  });
+  let Sequelize = require("sequelize");
+  let sequelize = require("../config/connection.js");
 
-  Orders.associate = function (models) {
+  let Order = sequelize.define("order", {
+    id: {
+      type: Sequelize.INTEGER,
+      autoIncrement: true,
+      primaryKey: true
+    },
+    rollName: {
+      types: Sequelize.STRING,
+    },
+    price: {
+      type: Sequelize.INTEGER,
+    },
+    category: {
+      type: Sequelize.STRING,
+    },
 
-    Orders.belongsTo(models.Food);
+  },
+    {
+      timestamp: false
+    },
+    {
+      classMethods: {
+        associate: function (models) {
+          Order.belongsTo(models.Food,
+            {
+              onDelete: "cascade",
+              foreignKey: {
+                allowNull: false
+              }
+            })
+        }
+      }
+    });
+  Order.sync();
 
-  };
-
-  return Orders;
+  return Order;
 
 };
