@@ -23,7 +23,7 @@ INSERT INTO food (price, rollName, category) VALUES ('15', 'Ahi Tuna Tataki', 'M
 INSERT INTO food (price, rollName, category) VALUES ('15', 'Poki Poki', 'Maki');
 /* -------------------------------------------------------------------------------------------- */
 USE sushi_db;
-INSERT INTO orders (rollName, quantity, tablenumber) VALUES ('Tuna', '1', '1');
+/* INSERT INTO orders (rollName, quantity, tablenumber) VALUES ('Tuna', '1', '1');
 INSERT INTO orders (rollName, quantity, tablenumber) VALUES ('Vegi Vegi', '2', '2');
 INSERT INTO orders (rollName, quantity, tablenumber) VALUES ('Ahi Tuna Tataki', '1', '2');
 INSERT INTO orders (rollName, quantity, tablenumber) VALUES ('Double Dragon', '3', '3');
@@ -31,4 +31,4 @@ INSERT INTO orders (rollName, quantity, tablenumber) VALUES ('Shrimp', '1', '4')
 INSERT INTO orders (rollName, quantity, tablenumber) VALUES ('Caterpillar', '4', '4');
 INSERT INTO orders (rollName, quantity, tablenumber) VALUES ('Big Eye Diver', '2', '2');
 INSERT INTO orders (rollName, quantity, tablenumber) VALUES ('Octopus', '1', '1');
-INSERT INTO orders (rollName, quantity, tablenumber) VALUES ('Salmon', '1', '3');
+INSERT INTO orders (rollName, quantity, tablenumber) VALUES ('Salmon', '1', '3'); */

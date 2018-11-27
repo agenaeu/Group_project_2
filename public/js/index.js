@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+    let tableNum = Math.floor(Math.random() * 4) + 1;
+
+    let sushiOrder = new 
+
     $(document).on("click", "#orderSubmit", newOrder);
 
     function newOrder(orderData) {

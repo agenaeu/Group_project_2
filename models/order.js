@@ -1,22 +1,25 @@
-module.exports = function (sequelize, DataTypes) {
-  let Sequelize = require("sequelize");
-  let sequelize = require("../config/connection.js");
+module.exports = function (sequelize, dataTypes) {
+
+
 
   let Order = sequelize.define("order", {
     id: {
-      type: Sequelize.INTEGER,
+      type: dataTypes.INTEGER,
       autoIncrement: true,
       primaryKey: true
     },
     rollName: {
-      types: Sequelize.STRING,
+      type: dataTypes.STRING,
     },
     price: {
-      type: Sequelize.INTEGER,
+      type: dataTypes.INTEGER,
     },
     category: {
-      type: Sequelize.STRING,
+      type: dataTypes.STRING,
     },
+    tableNum: {
+      type: dataTypes.ENUM('Table 1', 'Table 2', 'Table 3', 'Table 4')
+    }
 
   },
     {
