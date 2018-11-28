@@ -18,7 +18,7 @@ module.exports = function (app) {
       }
     }).then(function (dbFood) {
       res.json(dbFood);
-      console.log(dbFood);
+     // console.log(dbFood);
     });
   });
 
@@ -39,4 +39,19 @@ module.exports = function (app) {
       res.json(dbFood);
     });
   });
+
+  // Update an example by id
+  app.put("/api/food", function(req, res) {
+    db.Fost.update(
+      req.body,
+      {
+        where: {
+          id: req.body.id
+        }
+      }).then(function(dbPost) {
+      res.json(dbPost);
+    });
+  });
+
+
 };

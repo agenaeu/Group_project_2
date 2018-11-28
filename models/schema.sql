@@ -21,6 +21,7 @@ id int NOT NULL AUTO_INCREMENT,
 price int NOT NULL,
 rollName varchar(255) NOT NULL,
 category varchar(255) NOT NULL,
+quantity int NOT NULL,
 PRIMARY KEY (id)
 );
  

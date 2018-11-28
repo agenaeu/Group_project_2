@@ -16,6 +16,10 @@ module.exports = function (sequelize, dataTypes) {
     category: {
       type: dataTypes.STRING,
     },
+    quantity: {
+      type: dataTypes.INTEGER,
+    }
+    
   },
     {
       classMethods: {
