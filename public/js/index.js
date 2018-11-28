@@ -1,20 +1,40 @@
 $(document).ready(function () {
 
     let tableNum = Math.floor(Math.random() * 4) + 1;
+    var tableOneOrder = [];
 
-    let sushiOrder = new 
+    function SushiOrder(Roll, howMany, tableNumber){
+        this.Roll = rollName;
+        this.howMany = quantity;
+        this.tableNumber = tableNum;
+    }
+    function addOrder(Roll, howMany, tableNumber){
+        var one = new SushiOrder(Roll, howMany, tableNumber);
+        tableOneOrder.push(one);
+    }
+    
+
+   
+   
 
     $(document).on("click", "#orderSubmit", newOrder);
+    event.preventDefault();
+    console.log()
+  
+
 
     function newOrder(orderData) {
         $.post("/api/orders", orderData)
             .then(function (orderData) {
                 res.json(orderData);
+
             })
     };
 
     $('#s_1').on('change', function () {
-        $('#res1').html($(this).val());
+        console.log($(this).text());
+        $   ('#res1').html($(this).val());
+         
     });
 
     $('#s_2').on('change', function () {
