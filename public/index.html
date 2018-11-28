@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
-    <script src="./js/index.js"></script>
-    
+   
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
@@ -20,11 +19,13 @@
     <!-- <link href="css/bootstrap-form-validation.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="css/style.css" />
 
+    
 </head>
 
 
 <body>
 
+ 
     <!-- menu section Starts -->
     <div class="container col-md-12">
         <section id="menu" class="menu">
@@ -37,38 +38,21 @@
                             <ul class="margin-ten col-md-12 col-sm-12">
                                 <li><span>$6</span>TUNA
                                     <span style="width: 70px;
-                                                    display: inline-block; float:right;">
-
-
-
+                                    display: inline-block; float:right;">
                                         <div class="select-style med-input count count-cart no-border-round ">
-                                            <select name="" id="s_1">
-                                                <!-- <select id="mySelect" onchange="copy();"> -->
-                                                <option value="">0</option>
-                                                <option value="TUNA 1 ">1</option>
-                                                <option value="TUNA 2 ">2</option>
-                                                <option value="TUNA 3 ">3</option>
-                                                <option value="TUNA 4 ">4</option>
-                                                <option value="TUNA 5 ">5</option>
-                                            </select>
-                                        </div>
+                                            <input type="tel" id="s_1" name="" placeholder="0" min="0" max="20">
 
+                                        </div>
                                     </span>
                                 </li>
-                                <li><span>$6</span>TUNA BELLY
+                                <li><span>$6</span>TUNA BELLY <button type="button" class="fa fa-picture-o modal-popup "
+                                        data-toggle="modal" data-target="#tunab">
+                                    </button>
                                     <span style="width: 70px;
-                                                        display: inline-block; float:right;">
-                                           
+                                    display: inline-block; float:right;">
                                         <div class="select-style med-input count count-cart no-border-round ">
-                                            <select name="" id="s_2">
-                                                <option value="">0</option>
-                                                <option value="TUNA BELLY 1 ">1</option>
-                                                <option value="TUNA BELLY 2 ">2</option>
-                                                <option value="TUNA BELLY 3 ">3</option>
-                                                <option value="TUNA BELLY 4 ">4</option>
-                                                <option value="TUNA BELLY 5 ">5</option>
+                                            <input type="tel" id="s_2" name="" placeholder="0" min="0" max="20">
 
-                                            </select>
                                         </div>
                                     </span>
                                 </li>
@@ -77,17 +61,14 @@
 
 
                                 <li><span>$6</span>YELLOWTAIL
+                                    <button type="button" class="fa fa-picture-o modal-popup " data-toggle="modal"
+                                        data-target="#yellow">
+                                    </button>
                                     <span style="width: 70px;
-                                                            display: inline-block; float:right;">
+                                    display: inline-block; float:right;">
                                         <div class="select-style med-input count count-cart no-border-round ">
-                                            <select name="" id="s_3">
-                                                <option value="">0</option>
-                                                <option value="YELLOWTAIL 1">1</option>
-                                                <option value="YELLOWTAIL 2">2</option>
-                                                <option value="YELLOWTAIL 3">3</option>
-                                                <option value="YELLOWTAIL 4">4</option>
-                                                <option value="YELLOWTAIL 5">5</option>
-                                            </select>
+                                            <input type="tel" id="s_3" name="" placeholder="0" min="0" max="20">
+
                                         </div>
                                     </span>
                                 </li>
@@ -96,128 +77,93 @@
 
                                 <li><span>$6</span>SALMON
                                     <span style="width: 70px;
-                                                            display: inline-block; float:right;">
+                                    display: inline-block; float:right;">
                                         <div class="select-style med-input count count-cart no-border-round ">
-                                            <select name="" id="s_4">
-                                                <option value="">0</option>
-                                                <option value="SALMON 1">1</option>
-                                                <option value="SALMON 2">2</option>
-                                                <option value="SALMON 3">3</option>
-                                                <option value="SALMON 4">4</option>
-                                                <option value="SALMON 5">5</option>
-                                            </select>
+                                            <input type="tel" id="s_4" name="" placeholder="0" min="0" max="20">
+
                                         </div>
                                     </span>
                                 </li>
                                 <li><span>$6</span>OCTOPUS
                                     <span style="width: 70px;
-                                                                display: inline-block; float:right;">
+                                    display: inline-block; float:right;">
                                         <div class="select-style med-input count count-cart no-border-round ">
-                                            <select name="" id="s_5">
-                                                <option value="">0</option>
-                                                <option value="OCTOPUS 1">1</option>
-                                                <option value="OCTOPUS 2">2</option>
-                                                <option value="OCTOPUS 3">3</option>
-                                                <option value="OCTOPUS 4">4</option>
-                                                <option value="OCTOPUS 5">5</option>
-                                            </select>
+                                            <input type="tel" id="s_5" name="" placeholder="0" min="0" max="20">
+
                                         </div>
                                     </span>
                                 </li>
 
                                 <li><span>$7</span>FRESH WATER EEL
                                     <span style="width: 70px;
-                                                                display: inline-block; float:right;">
+                                    display: inline-block; float:right;">
                                         <div class="select-style med-input count count-cart no-border-round ">
-                                            <select name="" id="s_6">
-                                                <option value="">0</option>
-                                                <option value="FRESH WATER EEL 1">1</option>
-                                                <option value="FRESH WATER EEL 2">2</option>
-                                                <option value="FRESH WATER EEL 3">3</option>
-                                                <option value="FRESH WATER EEL 4">4</option>
-                                                <option value="FRESH WATER EEL 5">5</option>
-                                            </select>
+                                            <input type="tel" id="s_6" name="" placeholder="0" min="0" max="20">
+
                                         </div>
                                     </span>
                                 </li>
 
                                 <li><span>$6</span>SALT WATER EEL
+                                    <button type="button" class="fa fa-picture-o modal-popup " data-toggle="modal"
+                                        data-target="#eel">
+
+                                    </button>
+
                                     <span style="width: 70px;
-                                                                display: inline-block; float:right;">
+                                    display: inline-block; float:right;">
                                         <div class="select-style med-input count count-cart no-border-round ">
-                                            <select name="" id="s_7">
-                                                <option value="">0</option>
-                                                <option value="SALT WATER EEL 1">1</option>
-                                                <option value="SALT WATER EEL 2">2</option>
-                                                <option value="SALT WATER EEL 3">3</option>
-                                                <option value="SALT WATER EEL 4">4</option>
-                                                <option value="SALT WATER EEL 5">5</option>
-                                            </select>
+                                            <input type="tel" id="s_7" name="" placeholder="0" min="0" max="20">
+
                                         </div>
                                     </span>
                                 </li>
 
                                 <li><span>$12</span>SEA URCHIN
+
+                                    <button type="button" class="fa fa-picture-o modal-popup " data-toggle="modal"
+                                        data-target="#urchin">
+
+                                    </button>
                                     <span style="width: 70px;
                                                                 display: inline-block; float:right;">
                                         <div class="select-style med-input count count-cart no-border-round ">
-                                            <select name="" id="s_8">
-                                                <option value="">0</option>
-                                                <option value="SEA URCHIN 1">1</option>
-                                                <option value="SEA URCHIN 2">2</option>
-                                                <option value="SEA URCHIN 3">3</option>
-                                                <option value="SEA URCHIN 4">4</option>
-                                                <option value="SEA URCHIN 5">5</option>
-                                            </select>
+                                            <input type="tel" id="s_8" name="" placeholder="0" min="0" max="20">
+
                                         </div>
                                     </span>
                                 </li>
 
 
                                 <li><span>$7</span>SHRIMP
+                                    <button type="button" class="fa fa-picture-o modal-popup " data-toggle="modal"
+                                        data-target="#shrimp">
+                                    </button>
                                     <span style="width: 70px;
-                                                                display: inline-block; float:right;">
+                                    display: inline-block; float:right;">
                                         <div class="select-style med-input count count-cart no-border-round ">
-                                            <select name="" id="s_9">
-                                                <option value="">0</option>
-                                                <option value="SHRIMP 1">1</option>
-                                                <option value="SHRIMP 2">2</option>
-                                                <option value="SHRIMP 3">3</option>
-                                                <option value="SHRIMP 4">4</option>
-                                                <option value="SHRIMP 5">5</option>
-                                            </select>
+                                            <input type="tel" id="s_9" name="" placeholder="0" min="0" max="20">
+
                                         </div>
                                     </span>
                                 </li>
 
                                 <li><span>$9</span>SWEET SHRIMP
                                     <span style="width: 70px;
-                                                                display: inline-block; float:right;">
+                                    display: inline-block; float:right;">
                                         <div class="select-style med-input count count-cart no-border-round ">
-                                            <select name="" id="s_10">
-                                                <option value="">0</option>
-                                                <option value="SWEET SHRIMP 1">1</option>
-                                                <option value="SWEET SHRIMP 2">2</option>
-                                                <option value="SWEET SHRIMP 3">3</option>
-                                                <option value="SWEET SHRIMP 4">4</option>
-                                                <option value="SWEET SHRIMP 5">5</option>
-                                            </select>
+                                            <input type="tel" id="s_10" name="" placeholder="0" min="0" max="20">
+
                                         </div>
                                     </span>
                                 </li>
 
                                 <li><span>$6</span>SMOKED SALMON
                                     <span style="width: 70px;
-                                                                display: inline-block; float:right;">
+                                    display: inline-block; float:right;">
                                         <div class="select-style med-input count count-cart no-border-round ">
-                                            <select name="" id="s_11">
-                                                <option value="">0</option>
-                                                <option value="SMOKED SALMON 1">1</option>
-                                                <option value="SMOKED SALMON 2">2</option>
-                                                <option value="SMOKED SALMON 3">3</option>
-                                                <option value="SMOKED SALMON 4">4</option>
-                                                <option value="SMOKED SALMON 5">5</option>
-                                            </select>
+                                            <input type="tel" id="s_11" name="" placeholder="0" min="0" max="20">
+
                                         </div>
                                     </span>
                                 </li>
@@ -235,122 +181,93 @@
                             <ul class="margin-ten col-md-12 col-sm-12">
                                 <li><span>$13</span>VEGI VEGI
                                     <span style="width: 70px;
-                                                    display: inline-block; float:right;">
+                                    display: inline-block; float:right;">
                                         <div class="select-style med-input count count-cart no-border-round ">
-                                            <select name="" id="s_12">
-                                                <option value="">0</option>
-                                                <option value="VEGI VEGI 1">1</option>
-                                                <option value="VEGI VEGI 2">2</option>
-                                                <option value="VEGI VEGI 3">3</option>
-                                                <option value="VEGI VEGI 4">4</option>
-                                                <option value="VEGI VEGI 5">5</option>
-                                            </select>
+                                            <input type="tel" id="s_12" name="" placeholder="0" min="0" max="20">
+
                                         </div>
                                     </span>
                                 </li>
 
 
-                              
-                                  
+
+
                                 <li><span>$15</span>RAINBOW
-                                    <!-- <span style="width: 20px;
-                                    float:left;"><img src="images/photoicon.png"></span> -->
-                                    <!-- <i type="button" class="fa fa-picture-o modal-popup " aria-hidden="true"
-                                        data-toggle="modal" data-target="#myModal"></i> -->
-                                        <button type="button" class="fa fa-picture-o modal-popup " data-toggle="modal" data-target="#myModal">
-                                   
-                                        </button>
+
+                                    <button type="button" class="fa fa-picture-o modal-popup " data-toggle="modal"
+                                        data-target="#rainbow">
+
+                                    </button>
 
                                     <span style="width: 70px;
-                                                    display: inline-block; float:right;">
+                                    display: inline-block; float:right;">
                                         <div class="select-style med-input count count-cart no-border-round ">
-                                            <select name="" id="s_13">
-                                                <option value="">0</option>
-                                                <option value="RAINBOW 1">1</option>
-                                                <option value="RAINBOW 2">2</option>
-                                                <option value="RAINBOW 3">3</option>
-                                                <option value="RAINBOW 4">4</option>
-                                                <option value="RAINBOW 5">5</option>
-                                            </select>
+                                            <input type="tel" id="s_13" name="" placeholder="0" min="0" max="20">
+
                                         </div>
                                     </span>
                                 </li>
                                 <li><span>$15</span>CATERPILLAR
                                     <span style="width: 70px;
-                                                    display: inline-block; float:right;">
+                                    display: inline-block; float:right;">
                                         <div class="select-style med-input count count-cart no-border-round ">
-                                            <select name="" id="s_14">
-                                                <option value="">0</option>
-                                                <option value="CATERPILLAR 1">1</option>
-                                                <option value="CATERPILLAR 2">2</option>
-                                                <option value="CATERPILLAR 3">3</option>
-                                                <option value="CATERPILLAR 4">4</option>
-                                                <option value="CATERPILLAR 5">5</option>
-                                            </select>
+                                            <input type="tel" id="s_14" name="" placeholder="0" min="0" max="20">
+
                                         </div>
                                     </span>
                                 </li>
 
                                 <li><span>$15</span>SOFT SHELL CRAB
+
+                                    <button type="button" class="fa fa-picture-o modal-popup " data-toggle="modal"
+                                        data-target="#softshell">
+                                    </button>
                                     <span style="width: 70px;
-                                                    display: inline-block; float:right;">
+                                    display: inline-block; float:right;">
                                         <div class="select-style med-input count count-cart no-border-round ">
-                                            <select name="" id="s_15">
-                                                <option value="">0</option>
-                                                <option value="SOFT SHELL CRAB 1">1</option>
-                                                <option value="SOFT SHELL CRAB 2">2</option>
-                                                <option value="SOFT SHELL CRAB 3">3</option>
-                                                <option value="SOFT SHELL CRAB 4">4</option>
-                                                <option value="SOFT SHELL CRAB 5">5</option>
-                                            </select>
+                                            <input type="tel" id="s_15" name="" placeholder="0" min="0" max="20">
+
                                         </div>
                                     </span>
                                 </li>
 
                                 <li><span>$15</span>FUTOMAKI
+
+                                    <button type="button" class="fa fa-picture-o modal-popup " data-toggle="modal"
+                                        data-target="#futomaki">
+
+                                    </button>
                                     <span style="width: 70px;
-                                                    display: inline-block; float:right;">
+                                    display: inline-block; float:right;">
                                         <div class="select-style med-input count count-cart no-border-round ">
-                                            <select name="" id="s_16">
-                                                <option value="">0</option>
-                                                <option value="FUTOMAKI 1">1</option>
-                                                <option value="FUTOMAKI 2">2</option>
-                                                <option value="FUTOMAKI 3">3</option>
-                                                <option value="FUTOMAKI 4">4</option>
-                                                <option value="FUTOMAKI 5">5</option>
-                                            </select>
+                                            <input type="tel" id="s_16" name="" placeholder="0" min="0" max="20">
+
                                         </div>
                                     </span>
                                 </li>
                                 <li><span>$16</span>DOUBLE DRAGON
                                     <span style="width: 70px;
-                                                    display: inline-block; float:right;">
+                                    display: inline-block; float:right;">
                                         <div class="select-style med-input count count-cart no-border-round ">
-                                            <select name="" id="s_17">
-                                                <option value="">0</option>
-                                                <option value="DOUBLE DRAGON 1">1</option>
-                                                <option value="DOUBLE DRAGON 2">2</option>
-                                                <option value="DOUBLE DRAGON 3">3</option>
-                                                <option value="DOUBLE DRAGON 4">4</option>
-                                                <option value="DOUBLE DRAGON 5">5</option>
-                                            </select>
+                                            <input type="tel" id="s_17" name="" placeholder="0" min="0" max="20">
+
                                         </div>
                                     </span>
                                 </li>
 
 
                                 <li><span>$15</span>SAKE KANI
+
+                                    <button type="button" class="fa fa-picture-o modal-popup " data-toggle="modal"
+                                        data-target="#sake">
+
+                                    </button>
+
                                     <span style="width: 70px;
-                                                    display: inline-block; float:right;">
+                                    display: inline-block; float:right;">
                                         <div class="select-style med-input count count-cart no-border-round ">
-                                            <select name="" id="s_18">
-                                                <option value="">0</option>
-                                                <option value="SAKE KANI 1">1</option>
-                                                <option value="SAKE KANI 2">2</option>
-                                                <option value="SAKE KANI 3">3</option>
-                                                <option value="SAKE KANI 4">4</option>
-                                                <option value="SAKE KANI 5">5</option>
-                                            </select>
+                                            <input type="tel" id="s_18" name="" placeholder="0" min="0" max="20">
+
                                         </div>
                                     </span>
                                 </li>
@@ -359,16 +276,10 @@
 
                                 <li><span>$16</span>BIG EYE DIVER
                                     <span style="width: 70px;
-                                                    display: inline-block; float:right;">
+                                    display: inline-block; float:right;">
                                         <div class="select-style med-input count count-cart no-border-round ">
-                                            <select name="" id="s_19">
-                                                <option value="">0</option>
-                                                <option value="BIG EYE DIVER 1">1</option>
-                                                <option value="BIG EYE DIVER 2">2</option>
-                                                <option value="BIG EYE DIVER 3">3</option>
-                                                <option value="BIG EYE DIVER 4">4</option>
-                                                <option value="BIG EYE DIVER 5">5</option>
-                                            </select>
+                                            <input type="tel" id="s_19" name="" placeholder="0" min="0" max="20">
+
                                         </div>
                                     </span>
                                 </li>
@@ -376,16 +287,10 @@
 
                                 <li><span>$15</span>TEMPURA CRUNCHY
                                     <span style="width: 70px;
-                                                    display: inline-block; float:right;">
+                                    display: inline-block; float:right;">
                                         <div class="select-style med-input count count-cart no-border-round ">
-                                            <select name="" id="s_20">
-                                                <option value="">0</option>
-                                                <option value="TEMPURA CRUNCHY 1">1</option>
-                                                <option value="TEMPURA CRUNCHY 2">2</option>
-                                                <option value="TEMPURA CRUNCHY 3">3</option>
-                                                <option value="TEMPURA CRUNCHY 4">4</option>
-                                                <option value="TEMPURA CRUNCHY 5">5</option>
-                                            </select>
+                                            <input type="tel" id="s_20" name="" placeholder="0" min="0" max="20">
+
                                         </div>
                                     </span>
                                 </li>
@@ -393,33 +298,26 @@
 
                                 <li><span>$15</span>AHI TUNA TATAKI
                                     <span style="width: 70px;
-                                                    display: inline-block; float:right;">
+                                    display: inline-block; float:right;">
                                         <div class="select-style med-input count count-cart no-border-round ">
-                                            <select name="" id="s_21">
-                                                <option value="">0</option>
-                                                <option value="AHI TUNA TATAKI 1">1</option>
-                                                <option value="AHI TUNA TATAKI 2">2</option>
-                                                <option value="AHI TUNA TATAKI 3">3</option>
-                                                <option value="AHI TUNA TATAKI 4">4</option>
-                                                <option value="AHI TUNA TATAKI 5">5</option>
-                                            </select>
+                                            <input type="tel" id="s_21" name="" placeholder="0" min="0" max="20">
+
                                         </div>
                                     </span>
                                 </li>
 
 
                                 <li><span>$15</span>POKI POKI
+
+                                    <button type="button" class="fa fa-picture-o modal-popup " data-toggle="modal"
+                                        data-target="#poki">
+
+                                    </button>
                                     <span style="width: 70px;
-                                                    display: inline-block; float:right;">
+                                    display: inline-block; float:right;">
                                         <div class="select-style med-input count count-cart no-border-round ">
-                                            <select name="" id="s_22">
-                                                <option value="">0</option>
-                                                <option value="POKI POKI 1">1</option>
-                                                <option value="POKI POKI 2">2</option>
-                                                <option value="POKI POKI 3">3</option>
-                                                <option value="POKI POKI 4">4</option>
-                                                <option value="POKI POKI 5">5</option>
-                                            </select>
+                                            <input type="tel" id="s_22" name="" placeholder="0" min="0" max="20">
+
                                         </div>
                                     </span>
                                 </li>
@@ -471,17 +369,17 @@
 
                     <textarea class="margin-box" rows="2" cols="20" name="comment" placeholder="Special Requests"></textarea>
                 </div>
-                <input id="orderSubmit" class="highlight-button btn btn-large" value="Submit Your Order" type="submit">
+                <input class="highlight-button btn btn-large" value="Submit Your Order" type="submit">
 
             </div>
         </div>
     </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
+    <!-- Modal Rainbow-->
+    <div class="modal fade" id="rainbow" role="dialog">
         <div class="modal-dialog">
 
-            <!-- Modal content-->
+            <!-- Modal content 1-->
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -501,9 +399,215 @@
     </div>
 
 
+    <!-- Modal content Soft Shell-->
+    <div class="modal fade" id="softshell" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">SOFT SHELL CRAB</h4>
+                </div>
+                <div class="modal-body">
+
+                    <img src="images/softshell.jpg" class="img-responsive" alt="">
+                </div>
+                <div class="modal-footer text-center">
+                    <p>Fried Soft Shell Crab / Crab Mix / Cucumber, asparagus and Avocado</p>
+                    <button type="button" class="btn  modal_close " data-dismiss="modal">CLOSE</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Modal content Futomaki-->
+    <div class="modal fade" id="futomaki" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Futomaki</h4>
+                </div>
+                <div class="modal-body">
+
+                    <img src="images/futomaki.jpg" class="img-responsive" alt="">
+                </div>
+                <div class="modal-footer text-center">
+                    <p>Japanese Pickle / Sweet Egg / Crab Stick / Cucumber / Kampyo / Yamagobo
+                    </p>
+                    <button type="button" class="btn  modal_close " data-dismiss="modal">CLOSE</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Modal content Futomaki-->
+    <div class="modal fade" id="sake" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Sake Kani</h4>
+                </div>
+                <div class="modal-body">
+
+                    <img src="images/sake.jpg" class="img-responsive" alt="">
+                </div>
+                <div class="modal-footer text-center">
+                    <p>Spicy Crab Mix / Asparagus and Cucumber / Yellowtail / Sliced Jalapeño / Changchun Chili sauce
+                    </p>
+                    <button type="button" class="btn  modal_close " data-dismiss="modal">CLOSE</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal content Futomaki-->
+    <div class="modal fade" id="eel" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">SALT WATER EEL</h4>
+                </div>
+                <div class="modal-body">
+
+                    <img src="images/eel.jpg" class="img-responsive" alt="">
+                </div>
+                <div class="modal-footer text-center">
+
+                    <button type="button" class="btn  modal_close " data-dismiss="modal">CLOSE</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Modal content End-->
+
+
+
+    <!-- Modal content Yellow Tail-->
+    <div class="modal fade" id="yellow" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">YELLOW TAIL</h4>
+                </div>
+                <div class="modal-body">
+
+                    <img src="images/yellow.jpg" class="img-responsive" alt="">
+                </div>
+                <div class="modal-footer text-center">
+
+                    <button type="button" class="btn  modal_close " data-dismiss="modal">CLOSE</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Modal content End-->
+
+
+
+    <!-- Modal content Sea Urchin-->
+    <div class="modal fade" id="urchin" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">SEA URCHIN</h4>
+                </div>
+                <div class="modal-body">
+
+                    <img src="images/urchin.jpg" class="img-responsive" alt="">
+                </div>
+                <div class="modal-footer text-center">
+
+                    <button type="button" class="btn  modal_close " data-dismiss="modal">CLOSE</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Modal content End-->
+
+    <!-- Modal content Sea Urchin-->
+    <div class="modal fade" id="tunab" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">TUNA BELLY</h4>
+                </div>
+                <div class="modal-body">
+
+                    <img src="images/tunab.jpg" class="img-responsive" alt="">
+                </div>
+                <div class="modal-footer text-center">
+
+                    <button type="button" class="btn  modal_close " data-dismiss="modal">CLOSE</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Modal content End-->
+
+    <!-- Modal content Sea Urchin-->
+    <div class="modal fade" id="shrimp" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">SHRIMP</h4>
+                </div>
+                <div class="modal-body">
+
+                    <img src="images/shrimp.jpg" class="img-responsive" alt="">
+                </div>
+                <div class="modal-footer text-center">
+
+                    <button type="button" class="btn  modal_close " data-dismiss="modal">CLOSE</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Modal content End-->
+
+
+    <!-- Modal content Sea Urchin-->
+    <div class="modal fade" id="poki" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">POKI POKI</h4>
+                </div>
+                <div class="modal-body">
+
+                    <img src="images/poki.jpg" class="img-responsive" alt="">
+                </div>
+                <div class="modal-footer text-center">
+                    <p>Crab Mix / Asparagus and Cucumber / Avocado / Tuna Poki / Crumble Doritos
+                    </p>
+                    <button type="button" class="btn  modal_close " data-dismiss="modal">CLOSE</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Modal content End-->
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <script src="js/index.js"></script>
 
 
 
@@ -512,5 +616,3 @@
 </body>
 
 </html>
-
-

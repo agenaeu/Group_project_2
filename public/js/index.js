@@ -32,93 +32,130 @@ $(document).ready(function () {
     };
 
     $('#s_1').on('change', function () {
-        console.log($(this).text());
-        $   ('#res1').html($(this).val());
-         
+        var value = $(this).val();
+        $('#res1').html("TUNA " + value);
     });
 
     $('#s_2').on('change', function () {
-        $('#res2').html($(this).val());
+        var value = $(this).val();
+        $('#res2').html("TUNA BELLY " + value);
     });
 
     $('#s_3').on('change', function () {
-        $('#res3').html($(this).val());
+        var value = $(this).val();
+        $('#res3').html("YELLOWTAIL " + value);
     });
 
     $('#s_4').on('change', function () {
-        $('#res4').html($(this).val());
+        var value = $(this).val();
+        $('#res4').html("SALMON " + value);
     });
 
+
     $('#s_5').on('change', function () {
-        $('#res5').html($(this).val());
+        var value = $(this).val();
+        $('#res5').html("OCTOPUS " + value);
     });
 
     $('#s_6').on('change', function () {
-        $('#res6').html($(this).val());
+        var value = $(this).val();
+        $('#res6').html("FRESH WATER EEL " + value);
     });
+
 
     $('#s_7').on('change', function () {
-        $('#res7').html($(this).val());
+        var value = $(this).val();
+        $('#res7').html("SALT WATER EEL " + value);
     });
+
+
 
     $('#s_8').on('change', function () {
-        $('#res8').html($(this).val());
+        var value = $(this).val();
+        $('#res8').html("SEA URCHIN " + value);
     });
+
+
 
     $('#s_9').on('change', function () {
-        $('#res9').html($(this).val());
+        var value = $(this).val();
+        $('#res9').html("SHRIMP " + value);
     });
+
 
     $('#s_10').on('change', function () {
-        $('#res10').html($(this).val());
+        var value = $(this).val();
+        $('#res10').html("SWEET SHRIMP " + value);
     });
+
 
     $('#s_11').on('change', function () {
-        $('#res11').html($(this).val());
+        var value = $(this).val();
+        $('#res11').html("SMOKED SALMON " + value);
     });
+
 
     $('#s_12').on('change', function () {
-        $('#res12').html($(this).val());
+        var value = $(this).val();
+        $('#res12').html("VEGI VEGI " + value);
     });
+
 
     $('#s_13').on('change', function () {
-        $('#res13').html($(this).val());
+        var value = $(this).val();
+        $('#res13').html("RAINBOW " + value);
     });
+
+
 
     $('#s_14').on('change', function () {
-        $('#res14').html($(this).val());
+        var value = $(this).val();
+        $('#res14').html("CATERPILLAR " + value);
     });
+
 
     $('#s_15').on('change', function () {
-        $('#res15').html($(this).val());
+        var value = $(this).val();
+        $('#res15').html("SOFT SHELL CRAB " + value);
     });
 
+
     $('#s_16').on('change', function () {
-        $('#res16').html($(this).val());
+        var value = $(this).val();
+        $('#res16').html("FUTOMAKI " + value);
     });
 
     $('#s_17').on('change', function () {
-        $('#res17').html($(this).val());
+        var value = $(this).val();
+        $('#res17').html("DOUBLE DRAGON " + value);
     });
 
+
     $('#s_18').on('change', function () {
-        $('#res18').html($(this).val());
+        var value = $(this).val();
+        $('#res18').html("SAKE KANI " + value);
     });
 
     $('#s_19').on('change', function () {
-        $('#res19').html($(this).val());
+        var value = $(this).val();
+        $('#res19').html("BIG EYE DIVER " + value);
     });
 
     $('#s_20').on('change', function () {
-        $('#res20').html($(this).val());
+        var value = $(this).val();
+        $('#res20').html("TEMPURA CRUNCHY " + value);
     });
 
+
+
     $('#s_21').on('change', function () {
-        $('#res21').html($(this).val());
+        var value = $(this).val();
+        $('#res21').html("AHI TUNA TATAKI " + value);
     });
 
     $('#s_22').on('change', function () {
-        $('#res22').html($(this).val());
+        var value = $(this).val();
+        $('#res22').html("POKI POKI " + value);
     });
 
 
