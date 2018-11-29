@@ -1,7 +1,5 @@
 module.exports = function (sequelize, dataTypes) {
- 
-
-  let Food = sequelize.define("food", {
+  let Food = sequelize.define("Food", {
     id: {
       type: dataTypes.INTEGER,
       autoIncrement: true,
@@ -19,18 +17,19 @@ module.exports = function (sequelize, dataTypes) {
     quantity: {
       type: dataTypes.INTEGER,
     }
-    
-  },
+
+  });/* ,
     {
       classMethods: {
         associate: function (models) {
-          Food.hasmany(models.Order);
+          Food.hasmany(models.orders);
         }
       }
     },
     {
       timestamp: false
-    });
+    }
+  ); */
 
   Food.sync();
   /* Food.associate = function (models) {

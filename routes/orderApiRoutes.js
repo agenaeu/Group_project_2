@@ -1,63 +1,85 @@
+// *********************************************************************************
+// order-api-routes.js - this file offers a set of routes for displaying and saving data to the db
+// *********************************************************************************
+
+// Dependencies
+// =============================================================
+
+// Requiring our Todo model
 var db = require("../models");
 
-module.exports = function (app) {
-    // Get all Food for table 1
-    app.get("/api/order", function (req, res) {
-        db.Order.findAll({
-            where: {
-                table: 1
-            }
-        }).then(function (table1) {
-            res.json(table1);
-        });
-    });
+// Routes
+// =============================================================
+module.exports = function(app) {
 
-    // Get all Food for table 2
-    app.get("/api/order", function (req, res) {
-        Order.findAll({
-            where: {
-                table: 2
-            }
-        }).then(function (table2) {
-            res.json(table2);
-        });
-    });
+  // GET route for getting all of the posts
+  app.get("/api/orders/", function(req, res) {
+    db.orders.findAll({})
+      .then(function(dbOrders) {
+        res.json(dbOrders);
+      });
+  });
 
-    // Get all Food for table 3
-    app.get("/api/order", function (req, res) {
-        Order.findAll({
-            where: {
-                table: 3
-            }
-        }).then(function (table3) {
-            res.json(table3);
-        });
-    });
+  // Get route for returning posts of a specific category
+  app.get("/api/orders/category/:category", function(req, res) {
+    db.orders.findAll({
+      where: {
+        category: req.params.category
+      }
+    })
+      .then(function(dbOrders) {
+        res.json(dbOrders);
+      });
+  });
 
-    // Get all Food for table 4
-    app.get("/api/order", function (req, res) {
-        Order.findAll({
-            where: {
-                table: 4
-            }
-        }).then(function (table4) {
-            res.json(table4);
-        });
-    });
+  // Get route for retrieving a single post
+  app.get("/api/orders/:id", function(req, res) {
+    db.orders.findOne({
+      where: {
+        id: req.params.id
+      }
+    })
+      .then(function(dbOrders) {
+        res.json(dbOrders);
+      });
+  });
 
-    // Create a new order
-    app.post("/api/food", function (req, res) {
-        Order.create(req.body).then(function (dbOrder) {
-            res.json(dbOrder);
-        });
-    });
+  // POST route for saving a new post
+  app.post("/api/orders", function(req, res) {
+    console.log(req.body);
+    db.orders.create({
+      rollName: req.body.rollName,
+      quantity: req.body.quantity,
+      tableNum: req.body.tableNum
+    })
+      .then(function(dbOrders) {
+        res.json(dbOrders);
+      });
+  });
 
+  // DELETE route for deleting posts
+  app.delete("/api/orders/:id", function(req, res) {
+    db.orders.destroy({
+      where: {
+        id: req.params.id
+      }
+    })
+      .then(function(dbOrders) {
+        res.json(dbOrders);
+      });
+  });
 
-
-    // Delete an example by id
-    app.delete("/api/food/:id", function (req, res) {
-        Order.destroy({ where: { table: req.params.table } }).then(function (dbOrder) {
-            res.json(dbOrder);
-        });
-    });
+  // PUT route for updating posts
+  app.put("/api/orders", function(req, res) {
+    db.orders.update(req.body,
+      {
+        where: {
+          id: req.body.id
+        }
+      })
+      .then(function(dbOrders) {
+        res.json(dbOrders);
+      });
+  });
 };
+

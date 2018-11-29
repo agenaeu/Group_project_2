@@ -1,8 +1,5 @@
 module.exports = function (sequelize, dataTypes) {
-
-
-
-  let Order = sequelize.define("order", {
+  let orders = sequelize.define("orders", {
     id: {
       type: dataTypes.INTEGER,
       autoIncrement: true,
@@ -11,24 +8,21 @@ module.exports = function (sequelize, dataTypes) {
     rollName: {
       type: dataTypes.STRING,
     },
-    price: {
-      type: dataTypes.INTEGER,
-    },
     category: {
       type: dataTypes.STRING,
     },
     tableNum: {
-      type: dataTypes.ENUM('Table 1', 'Table 2', 'Table 3', 'Table 4')
+      type: dataTypes.INTEGER,
     }
 
-  },
+  });/* ,
     {
       timestamp: false
     },
     {
       classMethods: {
         associate: function (models) {
-          Order.belongsTo(models.Food,
+          orders.belongsTo(models.Food,
             {
               onDelete: "cascade",
               foreignKey: {
@@ -37,9 +31,9 @@ module.exports = function (sequelize, dataTypes) {
             })
         }
       }
-    });
-  Order.sync();
+    }); */
+  orders.sync();
 
-  return Order;
+  return orders;
 
 };

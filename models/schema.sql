@@ -4,7 +4,7 @@ CREATE DATABASE sushi_db;
 
 
 -- Create the table tasks.
-USE sushi_db;
+/* USE sushi_db;
 CREATE TABLE orders
 (
 id int NOT NULL AUTO_INCREMENT,
@@ -24,4 +24,4 @@ category varchar(255) NOT NULL,
 quantity int NOT NULL,
 PRIMARY KEY (id)
 );
- 
+  */
