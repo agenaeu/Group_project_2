@@ -1,275 +1,305 @@
 $(document).ready(function () {
+    var food;
+    $.get('/api/food', function(results) {
+      food = results;
+    });
     let tableNum = 1;
-    var tableOneOrder = [];
-    var chefTable = [];
-    tableOneOrder.forEach(function (element) { element.quantity = "0"; });
-    $('#submitForm').click(function(event){
-        event.preventDefault();
-        console.log(chefTable[chefTable.length-1]);
-        var newOrder = chefTable[chefTable.length-1];
-        submitOrder(newOrder);
-        
-       /*  $.ajax('/api/orders/',{
-            method: 'PUT',
-            data: chefTable
-        }).then(function(){
-            console.log(chefTable[chefTable.length-1]);
-           // location.reload();
-        }); */
+    var requestObject = {};
+    $('#submitForm').click(function(event) {
+      event.preventDefault();
+      submitOrder(requestObject);
     });
-    $.post('/api/orders', orders, function(data) {
-        //console.log(orders);
+    function submitOrder(order) {
+      $.post('/api/orders', order, function(data) {
         console.log(data);
-        //window.location.href = "/chef";
-      }); 
-    $('#s_1').on('change', function () {
-        var value = $(this).val();
-        $('#res1').html("TUNA " + value);
-        $.get("/api/food/1", function (results) {
-            //console.log(results);
-            results.quantity = value;
-            tableOneOrder.push(results);
-            let chefObj = tableOneOrder.map(({ rollName, quantity }) => ({ rollName, quantity, tableNum: tableNum }));
-            chefTable.push(chefObj);
-            //console.log(chefTable);
-            //console.log(chefObj);
-            //console.log(results);
-
-            //console.log(tableOneOrder);
-        });
+      });
+    }
+    $('#s_1').on('change', function() {
+    var value = $(this).val();
+    food.map(food => {
+      var rollName = food.rollName.toLowerCase();
+      if (rollName === 'tuna') {
+        requestObject.rollName = rollName;
+        requestObject.quantity = value;
+        requestObject.tableNum = tableNum;
+        console.log(requestObject);
+      }
     });
-    $('#s_2').on('change', function () {
-        var value = $(this).val();
-        $('#res2').html("TUNA BELLY " + value);
-        $.get("/api/food/2", function (results) {
-            results.quantity = value;
-            tableOneOrder.push(results);
-            let chefObj = tableOneOrder.map(({ rollName, quantity }) => ({ rollName, quantity, tableNum: tableNum }));
-            // console.log(tableOneOrder);
-            chefTable.push(chefObj);
-            //console.log(chefTable);
-        });
+    $('#res1').html('TUNA: ' + value);
+  });
+  $('#s_2').on('change', function() {
+    var value = $(this).val();
+    food.map(food => {
+      var rollName = food.rollName.toLowerCase();
+      if (rollName === 'tuna belly') {
+        requestObject.rollName = rollName;
+        requestObject.quantity = value;
+        requestObject.tableNum = tableNum;
+        console.log(requestObject);
+      }
     });
-    $('#s_3').on('change', function () {
-        var value = $(this).val();
-        $('#res3').html("YELLOWTAIL " + value);
-        $.get("/api/food/3", function (results) {
-            results.quantity = value;
-            tableOneOrder.push(results);
-            let chefObj = tableOneOrder.map(({ rollName, quantity }) => ({ rollName, quantity, tableNum: tableNum }));
-            chefTable.push(chefObj);
-            // console.log(tableOneOrder);
-        });
+    $('#res2').html('TUNA BELLY: ' + value);
+  });
+  $('#s_3').on('change', function() {
+    var value = $(this).val();
+    food.map(food => {
+      var rollName = food.rollName.toLowerCase();
+      if (rollName === 'yellowtail') {
+        requestObject.rollName = rollName;
+        requestObject.quantity = value;
+        requestObject.tableNum = tableNum;
+        console.log(requestObject);
+      }
     });
-    $('#s_4').on('change', function () {
-        var value = $(this).val();
-        $('#res4').html("SALMON " + value);
-        $.get("/api/food/4", function (results) {
-            results.quantity = value;
-            tableOneOrder.push(results);
-            let chefObj = tableOneOrder.map(({ rollName, quantity }) => ({ rollName, quantity, tableNum: tableNum }));
-            chefTable.push(chefObj);
-            //  console.log(tableOneOrder);
-        });
+    $('#res3').html('YELLOWTAIL: ' + value);
+  });
+  $('#s_4').on('change', function() {
+    var value = $(this).val();
+    food.map(food => {
+      var rollName = food.rollName.toLowerCase();
+      if (rollName === 'salmon') {
+        requestObject.rollName = rollName;
+        requestObject.quantity = value;
+        requestObject.tableNum = tableNum;
+        console.log(requestObject);
+      }
     });
-    $('#s_5').on('change', function () {
-        var value = $(this).val();
-        $('#res5').html("OCTOPUS " + value);
-        $.get("/api/food/5", function (results) {
-            results.quantity = value;
-            tableOneOrder.push(results);
-            let chefObj = tableOneOrder.map(({ rollName, quantity }) => ({ rollName, quantity, tableNum: tableNum }));
-            chefTable.push(chefObj);
-            //  console.log(tableOneOrder);
-        });
+    $('#res4').html('SALMON: ' + value);
+  });
+  $('#s_5').on('change', function() {
+    var value = $(this).val();
+    food.map(food => {
+      var rollName = food.rollName.toLowerCase();
+      if (rollName === 'octopus') {
+        requestObject.rollName = rollName;
+        requestObject.quantity = value;
+        requestObject.tableNum = tableNum;
+        console.log(requestObject);
+      }
     });
-    $('#s_6').on('change', function () {
-        var value = $(this).val();
-        $('#res6').html("FRESH WATER EEL " + value);
-        $.get("/api/food/6", function (results) {
-            results.quantity = value;
-            tableOneOrder.push(results);
-            let chefObj = tableOneOrder.map(({ rollName, quantity }) => ({ rollName, quantity, tableNum: tableNum }));
-            chefTable.push(chefObj);
-            //  console.log(tableOneOrder);
-        });
+    $('#res5').html('OCTOPUS: ' + value);
+  });
+  $('#s_6').on('change', function() {
+    var value = $(this).val();
+    food.map(food => {
+      var rollName = food.rollName.toLowerCase();
+      if (rollName === 'fresh water eel') {
+        requestObject.rollName = rollName;
+        requestObject.quantity = value;
+        requestObject.tableNum = tableNum;
+        console.log(requestObject);
+      }
     });
-    $('#s_7').on('change', function () {
-        var value = $(this).val();
-        $('#res7').html("SALT WATER EEL " + value);
-        $.get("/api/food/7", function (results) {
-            results.quantity = value;
-            tableOneOrder.push(results);
-            let chefObj = tableOneOrder.map(({ rollName, quantity }) => ({ rollName, quantity, tableNum: tableNum }));
-            chefTable.push(chefObj);
-            //  console.log(tableOneOrder);
-        });
+    $('#res6').html('FRESH WATER EEL: ' + value);
+  });
+  $('#s_7').on('change', function() {
+    var value = $(this).val();
+    food.map(food => {
+      var rollName = food.rollName.toLowerCase();
+      if (rollName === 'salt water eel') {
+        requestObject.rollName = rollName;
+        requestObject.quantity = value;
+        requestObject.tableNum = tableNum;
+        console.log(requestObject);
+      }
     });
-    $('#s_8').on('change', function () {
-        var value = $(this).val();
-        $('#res8').html("SEA URCHIN " + value);
-        $.get("/api/food/8", function (results) {
-            results.quantity = value;
-            tableOneOrder.push(results);
-            let chefObj = tableOneOrder.map(({ rollName, quantity }) => ({ rollName, quantity, tableNum: tableNum }));
-            chefTable.push(chefObj);
-            //  console.log(tableOneOrder);
-        });
+    $('#res7').html('SALT WATER EEL: ' + value);
+  });
+  $('#s_8').on('change', function() {
+    var value = $(this).val();
+    food.map(food => {
+      var rollName = food.rollName.toLowerCase();
+      if (rollName === 'sea urchin') {
+        requestObject.rollName = rollName;
+        requestObject.quantity = value;
+        requestObject.tableNum = tableNum;
+        console.log(requestObject);
+      }
     });
-    $('#s_9').on('change', function () {
-        var value = $(this).val();
-        $('#res9').html("SHRIMP " + value);
-        $.get("/api/food/9", function (results) {
-            results.quantity = value;
-            tableOneOrder.push(results);
-            let chefObj = tableOneOrder.map(({ rollName, quantity }) => ({ rollName, quantity, tableNum: tableNum }));
-            chefTable.push(chefObj);
-            //  console.log(tableOneOrder);
-        });
+    $('#res8').html('SEA URCHIN: ' + value);
+  });
+  $('#s_9').on('change', function() {
+    var value = $(this).val();
+    food.map(food => {
+      var rollName = food.rollName.toLowerCase();
+      if (rollName === 'shrimp') {
+        requestObject.rollName = rollName;
+        requestObject.quantity = value;
+        requestObject.tableNum = tableNum;
+        console.log(requestObject);
+      }
     });
-    $('#s_10').on('change', function () {
-        var value = $(this).val();
-        $('#res10').html("SWEET SHRIMP " + value);
-        $.get("/api/food/10", function (results) {
-            results.quantity = value;
-            tableOneOrder.push(results);
-            let chefObj = tableOneOrder.map(({ rollName, quantity }) => ({ rollName, quantity, tableNum: tableNum }));
-            chefTable.push(chefObj);
-            //  console.log(tableOneOrder);
-        });
+    $('#res9').html('SHRIMP: ' + value);
+  });
+  $('#s_10').on('change', function() {
+    var value = $(this).val();
+    food.map(food => {
+      var rollName = food.rollName.toLowerCase();
+      if (rollName === 'sweet shrimp') {
+        requestObject.rollName = rollName;
+        requestObject.quantity = value;
+        requestObject.tableNum = tableNum;
+        console.log(requestObject);
+      }
     });
-    $('#s_11').on('change', function () {
-        var value = $(this).val();
-        $('#res11').html("SMOKED SALMON " + value);
-        $.get("/api/food/11", function (results) {
-            results.quantity = value;
-            tableOneOrder.push(results);
-            let chefObj = tableOneOrder.map(({ rollName, quantity }) => ({ rollName, quantity, tableNum: tableNum }));
-            chefTable.push(chefObj);
-            // console.log(tableOneOrder);
-        });
+    $('#res10').html('SWEET SHRIMP: ' + value);
+  });
+  $('#s_11').on('change', function() {
+    var value = $(this).val();
+    food.map(food => {
+      var rollName = food.rollName.toLowerCase();
+      if (rollName === 'smoked salmon') {
+        requestObject.rollName = rollName;
+        requestObject.quantity = value;
+        requestObject.tableNum = tableNum;
+        console.log(requestObject);
+      }
     });
-    $('#s_12').on('change', function () {
-        var value = $(this).val();
-        $('#res12').html("VEGI VEGI " + value);
-        $.get("/api/food/12", function (results) {
-            results.quantity = value;
-            tableOneOrder.push(results);
-            let chefObj = tableOneOrder.map(({ rollName, quantity }) => ({ rollName, quantity, tableNum: tableNum }));
-            chefTable.push(chefObj);
-            // console.log(tableOneOrder);
-        });
+    $('#res11').html('SMOKED SALMON: ' + value);
+  });
+  $('#s_12').on('change', function() {
+    var value = $(this).val();
+    food.map(food => {
+      var rollName = food.rollName.toLowerCase();
+      if (rollName === 'vegi vegi') {
+        requestObject.rollName = rollName;
+        requestObject.quantity = value;
+        requestObject.tableNum = tableNum;
+        console.log(requestObject);
+      }
     });
-    $('#s_13').on('change', function () {
-        var value = $(this).val();
-        $('#res13').html("RAINBOW " + value);
-        $.get("/api/food/13", function (results) {
-            results.quantity = value;
-            tableOneOrder.push(results);
-            let chefObj = tableOneOrder.map(({ rollName, quantity }) => ({ rollName, quantity, tableNum: tableNum }));
-            chefTable.push(chefObj);
-            //  console.log(tableOneOrder);
-        });
+    $('#res12').html('VEGI VEGI: ' + value);
+  });
+  $('#s_13').on('change', function() {
+    var value = $(this).val();
+    food.map(food => {
+      var rollName = food.rollName.toLowerCase();
+      if (rollName === 'rainbow') {
+        requestObject.rollName = rollName;
+        requestObject.quantity = value;
+        requestObject.tableNum = tableNum;
+        console.log(requestObject);
+      }
     });
-    $('#s_14').on('change', function () {
-        var value = $(this).val();
-        $('#res14').html("CATERPILLAR " + value);
-        $.get("/api/food/14", function (results) {
-            results.quantity = value;
-            tableOneOrder.push(results);
-            let chefObj = tableOneOrder.map(({ rollName, quantity }) => ({ rollName, quantity, tableNum: tableNum }));
-            chefTable.push(chefObj);
-            // console.log(tableOneOrder);
-        });
+    $('#res13').html('RAINBOW: ' + value);
+  });
+  $('#s_14').on('change', function() {
+    var value = $(this).val();
+    food.map(food => {
+      var rollName = food.rollName.toLowerCase();
+      if (rollName === 'caterpillar') {
+        requestObject.rollName = rollName;
+        requestObject.quantity = value;
+        requestObject.tableNum = tableNum;
+        console.log(requestObject);
+      }
     });
-    $('#s_15').on('change', function () {
-        var value = $(this).val();
-        $('#res15').html("SOFT SHELL CRAB " + value);
-        $.get("/api/food/15", function (results) {
-            results.quantity = value;
-            tableOneOrder.push(results);
-            let chefObj = tableOneOrder.map(({ rollName, quantity }) => ({ rollName, quantity, tableNum: tableNum }));
-            chefTable.push(chefObj);
-            //console.log(tableOneOrder);
-        });
+    $('#res14').html('CATERPILLAR: ' + value);
+  });
+  $('#s_15').on('change', function() {
+    var value = $(this).val();
+    food.map(food => {
+      var rollName = food.rollName.toLowerCase();
+      if (rollName === 'soft shell crab') {
+        requestObject.rollName = rollName;
+        requestObject.quantity = value;
+        requestObject.tableNum = tableNum;
+        console.log(requestObject);
+      }
     });
-    $('#s_16').on('change', function () {
-        var value = $(this).val();
-        $('#res16').html("FUTOMAKI " + value);
-        $.get("/api/food/16", function (results) {
-            results.quantity = value;
-            tableOneOrder.push(results);
-            let chefObj = tableOneOrder.map(({ rollName, quantity }) => ({ rollName, quantity, tableNum: tableNum }));
-            chefTable.push(chefObj);
-            //console.log(tableOneOrder);
-        });
+    $('#res15').html('SOFT SHELL CRAB: ' + value);
+  });
+  $('#s_16').on('change', function() {
+    var value = $(this).val();
+    food.map(food => {
+      var rollName = food.rollName.toLowerCase();
+      if (rollName === 'futomaki') {
+        requestObject.rollName = rollName;
+        requestObject.quantity = value;
+        requestObject.tableNum = tableNum;
+        console.log(requestObject);
+      }
     });
-    $('#s_17').on('change', function () {
-        var value = $(this).val();
-        $('#res17').html("DOUBLE DRAGON " + value);
-        $.get("/api/food/17", function (results) {
-            results.quantity = value;
-            tableOneOrder.push(results);
-            let chefObj = tableOneOrder.map(({ rollName, quantity }) => ({ rollName, quantity, tableNum: tableNum }));
-            chefTable.push(chefObj);
-            //console.log(tableOneOrder);
-        });
+    $('#res16').html('FUTOMAKI: ' + value);
+  });
+  $('#s_17').on('change', function() {
+    var value = $(this).val();
+    food.map(food => {
+      var rollName = food.rollName.toLowerCase();
+      if (rollName === 'double dragon') {
+        requestObject.rollName = rollName;
+        requestObject.quantity = value;
+        requestObject.tableNum = tableNum;
+        console.log(requestObject);
+      }
     });
-    $('#s_18').on('change', function () {
-        var value = $(this).val();
-        $('#res18').html("SAKE KANI " + value);
-        $.get("/api/food/18", function (results) {
-            results.quantity = value;
-            tableOneOrder.push(results);
-            let chefObj = tableOneOrder.map(({ rollName, quantity }) => ({ rollName, quantity, tableNum: tableNum }));
-            chefTable.push(chefObj);
-            //  console.log(tableOneOrder);
-        });
+    $('#res17').html('DOUBLE DRAGON: ' + value);
+  });
+  $('#s_18').on('change', function() {
+    var value = $(this).val();
+    food.map(food => {
+      var rollName = food.rollName.toLowerCase();
+      if (rollName === 'sake kani') {
+        requestObject.rollName = rollName;
+        requestObject.quantity = value;
+        requestObject.tableNum = tableNum;
+        console.log(requestObject);
+      }
     });
-    $('#s_19').on('change', function () {
-        var value = $(this).val();
-        $('#res19').html("BIG EYE DIVER " + value);
-        $.get("/api/food/19", function (results) {
-            results.quantity = value;
-            tableOneOrder.push(results);
-            let chefObj = tableOneOrder.map(({ rollName, quantity }) => ({ rollName, quantity, tableNum: tableNum }));
-            chefTable.push(chefObj);
-            //console.log(tableOneOrder);
-        });
+    $('#res18').html('SAKE KANI: ' + value);
+  });
+  $('#s_19').on('change', function() {
+    var value = $(this).val();
+    food.map(food => {
+      var rollName = food.rollName.toLowerCase();
+      if (rollName === 'big eye diver') {
+        requestObject.rollName = rollName;
+        requestObject.quantity = value;
+        requestObject.tableNum = tableNum;
+        console.log(requestObject);
+      }
     });
-    $('#s_20').on('change', function () {
-        var value = $(this).val();
-        $('#res20').html("TEMPURA CRUNCHY " + value);
-        $.get("/api/food/20", function (results) {
-            results.quantity = value;
-            tableOneOrder.push(results);
-            let chefObj = tableOneOrder.map(({ rollName, quantity }) => ({ rollName, quantity, tableNum: tableNum }));
-            chefTable.push(chefObj);
-            //console.log(tableOneOrder);
-        });
+    $('#res19').html('BIG EYE DIVER: ' + value);
+  });
+  $('#s_20').on('change', function() {
+    var value = $(this).val();
+    food.map(food => {
+      var rollName = food.rollName.toLowerCase();
+      if (rollName === 'tempura crunchy') {
+        requestObject.rollName = rollName;
+        requestObject.quantity = value;
+        requestObject.tableNum = tableNum;
+        console.log(requestObject);
+      }
     });
-    $('#s_21').on('change', function () {
-        var value = $(this).val();
-        $('#res21').html("AHI TUNA TATAKI " + value);
-        $.get("/api/food/21", function (results) {
-            results.quantity = value;
-            tableOneOrder.push(results);
-            let chefObj = tableOneOrder.map(({ rollName, quantity }) => ({ rollName, quantity, tableNum: tableNum }));
-            chefTable.push(chefObj);
-            //console.log(tableOneOrder);
-        });
+    $('#res20').html('TEMPURA CRUNCHY: ' + value);
+  });
+  $('#s_21').on('change', function() {
+    var value = $(this).val();
+    food.map(food => {
+      var rollName = food.rollName.toLowerCase();
+      if (rollName === 'ahi tuna tataki') {
+        requestObject.rollName = rollName;
+        requestObject.quantity = value;
+        requestObject.tableNum = tableNum;
+        console.log(requestObject);
+      }
     });
-    $('#s_22').on('change', function () {
-        var value = $(this).val();
-        $('#res22').html("POKI POKI " + value);
-        $.get("/api/food/22", function (results) {
-            results.quantity = value;
-            tableOneOrder.push(results);
-            let chefObj = tableOneOrder.map(({ rollName, quantity }) => ({ rollName, quantity, tableNum: tableNum }));
-            chefTable.push(chefObj);
-            //console.log(tableOneOrder);
-        });
+    $('#res21').html('AHI TUNA TATAKI: ' + value);
+  });
+  $('#s_22').on('change', function() {
+    var value = $(this).val();
+    food.map(food => {
+      var rollName = food.rollName.toLowerCase();
+      if (rollName === 'poki poki') {
+        requestObject.rollName = rollName;
+        requestObject.quantity = value;
+        requestObject.tableNum = tableNum;
+        console.log(requestObject);
+      }
     });
+    $('#res22').html('POKI POKI: ' + value);
+  });
     // modal js
     $('#myModal').on('shown.bs.modal', function () {
         $('#myInput').trigger('focus')

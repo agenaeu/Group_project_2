@@ -47,7 +47,7 @@ module.exports = function (app) {
   });
   // Update an example by id
   app.put("/api/food", function (req, res) {
-    db.Fost.update(req.body,
+    db.Food.update(req.body,
       {
         where: {
           id: req.body.id

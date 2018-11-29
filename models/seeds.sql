@@ -32,3 +32,4 @@ INSERT INTO orders (rollName, quantity, tablenumber) VALUES ('Caterpillar', '4',
 INSERT INTO orders (rollName, quantity, tablenumber) VALUES ('Big Eye Diver', '2', '2');
 INSERT INTO orders (rollName, quantity, tablenumber) VALUES ('Octopus', '1', '1');
 INSERT INTO orders (rollName, quantity, tablenumber) VALUES ('Salmon', '1', '3'); */
+SELECT * FROM orders;
