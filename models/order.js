@@ -5,16 +5,9 @@ module.exports = function (sequelize, dataTypes) {
       autoIncrement: true,
       primaryKey: true
     },
-    rollName: {
-      type: dataTypes.STRING,
-    },
-    category: {
-      type: dataTypes.STRING,
-    },
-    tableNum: {
-      type: dataTypes.INTEGER,
-    }
-
+    rollName: dataTypes.STRING,
+    quantity: dataTypes.STRING,
+    tableNum: dataTypes.INTEGER,
   });/* ,
     {
       timestamp: false

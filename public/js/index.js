@@ -17,11 +17,11 @@ $(document).ready(function () {
            // location.reload();
         }); */
     });
-    function submitOrder(orders) {
-        $.post("/api/orders/", orders, function() {
-          //window.location.href = "/blog";
-        });
-      }
+    $.post('/api/orders', orders, function(data) {
+        //console.log(orders);
+        console.log(data);
+        //window.location.href = "/chef";
+      }); 
     $('#s_1').on('change', function () {
         var value = $(this).val();
         $('#res1').html("TUNA " + value);
