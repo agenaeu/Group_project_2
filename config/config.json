@@ -1,21 +1,26 @@
 {
   "development": {
     "username": "root",
-    "password": "Mooninite_23",
-    "database": "sushi_db",
-    "host": "localhost",
+    "password": "cosimo77@@",
+    "database": "blogger",
+    "port": 3306,
     "dialect": "mysql"
   },
+
   "test": {
-    "username": "root",
-    "password": "Mooninite_23",
-    "database": "sushi_db",
-    "host": "localhost",
-    "dialect": "mysql",
-    "logging": false
+    "username": "izhar",
+    "password": "izhar",
+    "database": "blogger",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "dialect": "mysql"
   },
   "production": {
-    "use_env_variable": "JAWSDB_URL",
+    "username": "izhar",
+    "password": "izhar",
+    "database": "blogger",
+    "host": "127.0.0.1",
+    "port": 3306,
     "dialect": "mysql"
   }
 }

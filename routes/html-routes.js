@@ -12,20 +12,21 @@ module.exports = function(app) {
 
   // Each of the below routes just handles the HTML page that the user gets sent to.
 
-  // index route loads index.html
+  // index route loads view.html
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
-  });
-  // chef route loads chef.html
-  app.get("/chef", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/chef.html"));
+    res.sendFile(path.join(__dirname, "../public/blog.html"));
   });
 
-  // admin route loads admin.html
-  app.get("/admin", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/admin.html"));
+  app.get("/cms", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/cms.html"));
   });
-  //  thank you route loads thankyou.html
+
+  // blog route loads blog.html
+  app.get("/blog", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/blog.html"));
+  });
+
+  // thankyou route loads thankyou.html
   app.get("/thankyou", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/thankyou.html"));
   });
